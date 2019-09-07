@@ -7,12 +7,12 @@ var brandNames = {
 "urbanoutfitters": "Urban Outfitters",
 };
 var brandScores = {};
-$(document).ready(function(){
-    $('a').mousedown(function(){
-      chrome.tabs.create({url: $(this).attr('href')});
-      return false;
-    });
- });
+// $(document).ready(function(){
+//     $('a').mousedown(function(){
+//       chrome.tabs.create({url: $(this).attr('href')});
+//       return false;
+//     });
+//  });
 $.get( url, function( data ) {
   var text = data;
   text = text.split("\n");
