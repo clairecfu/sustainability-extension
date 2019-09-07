@@ -63,24 +63,46 @@ function renderName(nameText) {
 function renderIndex(indexText){
 var indexNum = parseInt(indexText, 10);
 
-    var color; //0-10
+    //text color
+    var color, mood; //0-10
     if(indexNum <=10){
         color="red";
-    }
+        mood ="sad";
+   }
     else if(indexNum <= 20){
         color = "orange";
+        mood ="sad";
     }
     else if(indexNum <= 30){
         color = "dark-yellow";
+        mood ="happy";
     }
     else if(indexNum <= 40){
         color = "blue";
+        mood ="happy";
     }
     else{
         color="green";
+        mood ="happy";
     }
+    
+    //turtle img
+    var src = document.getElementById("turtle");
+    var img = document.createElement("img");
+    
+    if(mood=="happy"){
+        img.src = "images/turtle.gif";
+    }
+    else{
+        img.src = "images/sadturtle.png"
+    }
+    
+    src.appendChild(img);
+      img.setAttribute("width", "80");
+  img.setAttribute("height", "80");
+    
   document.getElementById('index').textContent = indexText;
-    document.getElementById("index").style.color = color;
+  document.getElementById("index").style.color = color;
 }
 
 function url_domain(data) {
