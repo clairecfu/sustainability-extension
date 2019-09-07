@@ -16,6 +16,7 @@ function getCurrentTabUrl(callback) {
     currentWindow: true
   };
 
+
   chrome.tabs.query(queryInfo, function(tabs) {
     // chrome.tabs.query invokes the callback with a list of tabs that match the
     // query. When the popup is opened, there is certainly a window and at least
@@ -54,18 +55,40 @@ function getCurrentTabUrl(callback) {
  *   The callback gets a string that describes the failure reason.
  */
 
-
-function renderStatus(statusText) {
-  document.getElementById('status').textContent = statusText;
+var background = chrome.extension.getBackgroundPage();
+function renderName(nameText) {
+  document.getElementById('name').textContent = nameText;
 }
+
+function renderIndex(indexText){
+  document.getElementById('index').textContent = indexText;
+    
+var indexNum = parseInt(indexText, 10);
+
+    var color; //0-10
+    if(indexNum <=10){
+        color="red";
+    }
+    else if(indexNum <= 20){
+        color = "orange";
+    }
+    else if(indexNum <= 30){
+        color = "dark-yellow";
+    }
+    else if(indexNum <= 40){
+        color = "blue";
+    }
+    else{
+        color="green";
+    }
+   document.getElementById("index").style.color = color;
+}
+
 function url_domain(data) {
   var    a      = document.createElement('a');
          a.href = data;
   return a.hostname;
 }
-brandNames = {"forever21": "Forever 21",
-"jcrew": "J.Crew"
-};
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -74,11 +97,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var domain = url.match(re)[0];
     console.log(url.match(re)[0]);
     console.log(typeof(domain));
-    if (brandNames[domain]){
-      renderStatus(brandNames[domain]);
+    if (background.brandNames[domain]){
+      brandName = background.brandNames[domain]
+      renderName(brandName);
+      console.log(background.brandScores[brandName]);
+      renderIndex(background.brandScores[brandName]);
+
     }
     else{
-      renderStatus("No data available for " +  domain.charAt(0).toUpperCase() + domain.substring(1));
+      renderName("No data available for " +  domain.charAt(0).toUpperCase() + domain.substring(1));
     }
 
   });

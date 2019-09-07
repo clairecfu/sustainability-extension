@@ -12,26 +12,33 @@
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
       }
-      #status {
+      #name{
         max-width: 200px;
         min-width: 200px;
         min-height: 200px;
         word-wrap: break-word;
       }
 
-.knockout {
-	vertical-align: middle;
+
+#name, #index {
+    vertical-align: middle;
 	text-align: center;
 	font-family: 'Helvetica';
 	font-size:20pt;
-	color: blue;
+    word-wrap: break-word;
+    
+}
+        
+#name{
+    vertical-align: middle;
+	text-align: center;
+    color: blue;
 	color: #fff;
-	background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
-	background-size: 300%;
+    background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
+    background-size: 300%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    word-wrap: break-word;
-    animation: Gradient 5s ease infinite;
+        animation: Gradient 5s ease infinite;
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 5s ease infinite;
 }
@@ -58,11 +65,8 @@
     <script src="popup.js"></script>
   </head>
   <body>
-      
-    <h1 class="knockout">
-    <div id="status"></div>
-    <div id="loadingbar"></div>
+    <div id="name"></div>
+    <div id="index"></div>
     <img src="images/turtle.gif" height=50%, width="50%">
-    </h1>
   </body>
 </html>
