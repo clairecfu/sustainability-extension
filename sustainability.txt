@@ -90,7 +90,6 @@ Zara
 46
 The North Face
 57
-10
 Miu Miu
 20
 Target
@@ -123,8 +122,7 @@ Topshop
 28
 Burberry
 33
-United Colors
-of Benetton
+United Colors of Benetton
 44
 Chico's
 9
@@ -242,7 +240,6 @@ Famous Footwear
 7
 TJ Maxx
 15
-21
 Columbia Sportswear
 21
 Hudson's Bay
@@ -255,7 +252,6 @@ Saks Fifth Avenue
 21
 Dillards
 7
-15
 Ralph Lauren
 21
 Sports Direct
@@ -402,4 +398,3 @@ Elie Tahari
 0
 Tom Ford
 0
-
