@@ -11,40 +11,67 @@
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
-        word-wrap: break-word;
       }
       #status {
         white-space: pre;
         text-overflow: ellipsis;
-        overflow: hidden;
         min-width: 200px;
-          max-width: 200px;
         min-height: 200px;
         -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
         animation: mymove 5s infinite;
-        word-wrap: break-word;
       }
-
-@-webkit-keyframes mymove {
-  from {background-color: rgba(50, 115, 220, 0.3);}
-  to {background-color: hsla(14, 100%, 53%, 0.6);}
+.border{
+	padding: 5px;
+		background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
+	background-size: 400% 400%;
+	height: 400px;
+	background-position: 25% 50%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 5s ease infinite;
 }
-        
-@-webkit-keyframes mymove {
-  from {left: 0px;}
-  to {left: 50px;}
+.inner-cutout{
+	padding: 40px 0;
+	display: block;
+	background-color:#ff6f69;/*#ff6f69*/
+	margin: 2%;
+	padding-bottom: 40px;
+	height: 300px;
+	background: radial-gradient(#ff6f69, #ff8b87);
+	 background-size: 300%;
+	background-position:50% 50%;
+
+}
+.knockout {
+	
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Helvetica';
+	font-size:30pt;
+	color: blue;
+	color: #fff;
+	background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
+	background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    word-wrap: break-word;
+}
+.knockout{
+		animation: Gradient 5s ease infinite;
+		-webkit-animation: Gradient 15s ease infinite;
+		-moz-animation: Gradient 5s ease infinite;
+    word-wrap: break-word;
 }
 
-/* Standard syntax */
-@keyframes mymove {
-  from {left: 0px;}
-  to {left: 50px;}
-}
-
-/* Standard syntax */
-@keyframes mymove {
-  from {background-color: rgba(50, 115, 220, 0.3);}
-  to {background-color: hsla(14, 100%, 53%, 0.6);}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 30% 50%
+	}
+	50% {
+		background-position: 25% 50%
+	}
+	100% {
+		background-position: 30% 50%
+	}
 }
     </style>
 
@@ -57,7 +84,9 @@
     <script src="popup.js"></script>
   </head>
   <body>
+    <h1 class="knockout">
     <div id="status"></div>
-    <img id="image-result">
+    <img src="turtle.gif" height=50%, width="50%">
   </body>
+      </h1>
 </html>
