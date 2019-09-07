@@ -63,17 +63,24 @@ function url_domain(data) {
          a.href = data;
   return a.hostname;
 }
+brandNames = {"forever21": "Forever 21",
+"jcrew": "J.Crew"
+};
+
 
 document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(url) {
     var re = /(?<=www.).*(?=.com)/;
     var domain = url.match(re)[0];
-    var brandName = domain.charAt(0).toUpperCase() + domain.substring(1);
-
     console.log(url.match(re)[0]);
     console.log(typeof(domain));
+    if (brandNames[domain]){
+      renderStatus(brandNames[domain]);
+    }
+    else{
+      renderStatus("No data available for " +  domain.charAt(0).toUpperCase() + domain.substring(1));
+    }
 
-    renderStatus(brandName);
   });
 
 });
