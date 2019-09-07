@@ -98,8 +98,8 @@ var indexNum = parseInt(indexText, 10);
     }
     
     src.appendChild(img);
-      img.setAttribute("width", "80");
-  img.setAttribute("height", "80");
+      img.setAttribute("width", "120");
+  img.setAttribute("height", "120");
     
   document.getElementById('index').textContent = indexText;
   document.getElementById("index").style.color = color;

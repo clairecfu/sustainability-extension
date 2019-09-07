@@ -11,28 +11,29 @@
       body {
         max-width: 250px;
         min-width: 250px;
-        min-height: 250px;
-        max-height: 400;
-        padding: 10px;
+        min-height: 100px;
+        max-height: 400px;
+        padding: 5px;
         word-wrap: break-word;
         }
 	  a {font-size: 10pt}
 
 #name, #index {
-    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
     font-size: 100%;
-    font-size: 15pt;
     vertical-align: middle;
 	text-align: center;
 	font-family: 'Helvetica';
-	font-size: 15pt;
+	font-size: 30pt;
     word-wrap: break-word;
     
 }
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  border: none;
+  /* background-color: #f1f1f1; */
+  vertical-align: bottom;
+  padding: 0px;
+  font-family: 'Helvetica';
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -44,6 +45,9 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  font-family: 'Helvetica';
+  font-size: 10pt;
+  border-radius: 25px;
 }
 
 /* Change background color of buttons on hover */
@@ -59,18 +63,14 @@
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
 }
         
 #turtle{
-    vertical-align: middle;
+	horizontal-align: middle;
     display: block;
-    margin-left: 100px;
+    margin-left: auto;
     margin-right: auto;
-    width: 55%;
-    height: 55%;
 }
         
 #name{
@@ -78,7 +78,7 @@
 	text-align: center;
     color: blue;
 	color: #fff;
-    background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
+    background: linear-gradient(110deg, #808000 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #228B22 34%);
     background-size: 300%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -119,12 +119,12 @@
 	  <!-- Tab content -->
 	  <div id="brand-tab-content" class="tabcontent">
 			<div id="name"></div>
-			<div id="turtle"></div>
+			<center><div id="turtle"></div></center>
 			<div id="caption"> Sustainability Index: </div>
 			<div id="index"></div>
-			<a href="https://www.fashionrevolution.org/about/transparency/">
+			<!-- <a href="https://www.fashionrevolution.org/about/transparency/">
 				Click here to learn more about the transparency index
-			</a>
+			</a> -->
 		  </div>
 		  
 		  <div id="info-tab-content" class="tabcontent">

@@ -5,6 +5,7 @@ var brandNames = {
 "forever21": "Forever 21",
 "jcrew": "J.Crew",
 "urbanoutfitters": "Urban Outfitters",
+"patagonia": "Patagonia"
 };
 var brandScores = {};
 // $(document).ready(function(){
