@@ -15,16 +15,15 @@
       #name{
         max-width: 200px;
         min-width: 200px;
-        min-height: 200px;
+        padding: 10px;
         word-wrap: break-word;
       }
-
 
 #name, #index {
     vertical-align: middle;
 	text-align: center;
 	font-family: 'Helvetica';
-	font-size:20pt;
+	font-size: 15pt;
     word-wrap: break-word;
     
 }
@@ -42,6 +41,12 @@
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 5s ease infinite;
 }
+        
+    #caption{
+        vertical-align: middle;
+        text-align: center;
+        font-size: 10pt;
+        }
 
 @-webkit-keyframes Gradient {
 	0% {
@@ -66,7 +71,10 @@
   </head>
   <body>
     <div id="name"></div>
-    <div id="index"></div>
+    <div id="caption"> Sustainability Index: </div>
+	<div id="index"></div>
+	<a href="https://www.fashionrevolution.org/about/transparency/">Click here to learn more about the transparency index</a>
     <img src="images/turtle.gif" height=50%, width="50%">
   </body>
 </html>
+

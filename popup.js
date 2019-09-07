@@ -61,8 +61,6 @@ function renderName(nameText) {
 }
 
 function renderIndex(indexText){
-  document.getElementById('index').textContent = indexText;
-    
 var indexNum = parseInt(indexText, 10);
 
     var color; //0-10
@@ -81,7 +79,8 @@ var indexNum = parseInt(indexText, 10);
     else{
         color="green";
     }
-   document.getElementById("index").style.color = color;
+  document.getElementById('index').textContent = indexText;
+    document.getElementById("index").style.color = color;
 }
 
 function url_domain(data) {
@@ -109,5 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
   });
+
 
 });
