@@ -61,7 +61,7 @@ function renderName(nameText) {
 }
 
 function renderIndex(indexText){
-  document.getElementById('index').textContent = indexText;
+  document.getElementById('index').textContent = "Sustainability Index: " + indexText;
 }
 function url_domain(data) {
   var    a      = document.createElement('a');
@@ -88,5 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
   });
+
 
 });
