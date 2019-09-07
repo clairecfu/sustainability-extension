@@ -28,6 +28,40 @@
     word-wrap: break-word;
     
 }
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
         
 #name{
     vertical-align: middle;
@@ -68,16 +102,31 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-    <script src="popup.js"></script>
+	
   </head>
   <body>
-    <div id="name"></div>
-    <div id="caption"> Sustainability Index: </div>
-	<div id="index"></div>
-	<a href="https://www.fashionrevolution.org/about/transparency/">
-		Click here to learn more about the transparency index
-	</a>
-    <img src="images/turtle.gif" height=50%, width="50%">
+	  <!-- Tab content -->
+	  <div id="brand-tab-content" class="tabcontent">
+			<div id="name"></div>
+			<div id="caption"> Sustainability Index: </div>
+			<div id="index"></div>
+			<a href="https://www.fashionrevolution.org/about/transparency/">
+				Click here to learn more about the transparency index
+			</a>
+			<img src="images/turtle.gif" height=50%, width="50%">
+		  </div>
+		  
+		  <div id="info-tab-content" class="tabcontent">
+			<p>info tab</p>
+		  </div>
+		  <script src="popup.js"></script>
+
+	<div class="tab">
+		<button class = "tablinks active" id="brand-tab">Sustainability Info</button>
+		<button class = "tablinks" id="info-tab">Learn More!</button>
+	  </div>
+	  
+	  
   </body>
 </html>
 

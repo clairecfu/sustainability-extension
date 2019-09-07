@@ -89,8 +89,43 @@ function url_domain(data) {
   return a.hostname;
 }
 
+function openTab(evt, tab) {
+  
+  // Declare all variables
+  var i, tabcontent, tablinks;
+  console.log(tab);
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 
-document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tab+"-content").style.display = "block";
+  console.log(evt.currentTarget);
+  document.getElementById(tab).className +=" active";
+  // evt.currentTarget.className += " active";
+}
+
+document.addEventListener('DOMContentLoaded', function(e) {
+  document.getElementById("brand-tab").addEventListener('click', function() {openTab(e, "brand-tab")});
+  document.getElementById("brand-tab-content").style.display = "block";
+});
+document.addEventListener('DOMContentLoaded', function(e) {
+  document.getElementById("info-tab").addEventListener("click", function() {openTab(e, "info-tab")});
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function(e) {
+  
   getCurrentTabUrl(function(url) {
     var re = /(?<=www.).*(?=.com)/;
     var domain = url.match(re)[0];
