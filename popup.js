@@ -61,8 +61,8 @@ function renderName(nameText) {
 }
 
 function renderIndex(indexText){
-var indexNum = parseInt(indexText, 10);
-
+    try{
+        var indexNum = parseInt(indexText, 10);
     //text color
     var color, mood; //0-10
     if(indexNum <=10){
@@ -93,10 +93,16 @@ var indexNum = parseInt(indexText, 10);
     if(mood=="happy"){
         img.src = "images/turtle.gif";
     }
-    else{
-        img.src = "images/sadturtle.png"
+    if(mood=="sad"){
+        img.src = "images/sadturtle.png";
     }
-    
+    }
+    catch{
+    var src = document.getElementById("turtle");
+    var img = document.createElement("img");
+        img.src = "images/confusedturtle.png";
+    }
+ 
     src.appendChild(img);
       img.setAttribute("width", "150");
   img.setAttribute("height", "150");

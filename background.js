@@ -5,7 +5,11 @@ var brandNames = {
 "forever21": "Forever 21",
 "jcrew": "J.Crew",
 "urbanoutfitters": "Urban Outfitters",
-"patagonia": "Patagonia"
+"patagonia": "Patagonia",
+    "asos": "ASOS",
+"champion": "Champion",
+"nike": "Nike",
+"zara": "Zara"
 };
 var brandScores = {};
 // $(document).ready(function(){
