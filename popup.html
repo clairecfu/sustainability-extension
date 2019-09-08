@@ -11,22 +11,68 @@
       body {
         max-width: 250px;
         min-width: 250px;
-        min-height: 100px;
+        min-height: 400px;
         max-height: 400px;
         padding: 5px;
         word-wrap: break-word;
+		align-items: center;
+		justify-content: center;
         }
-	  a {font-size: 10pt}
+	  
 
 #name, #index {
     font-size: 100%;
     vertical-align: middle;
 	text-align: center;
-	font-family: 'Helvetica';
+	font-family: 'Lucida Grande';
 	font-size: 30pt;
     word-wrap: break-word;
     
 }
+#index {
+	font-size: 50pt;
+}
+#tab_title{
+	font-size: 20pt;
+}
+.collapsible {
+  background-color: #1E86A5 ;
+  color: white;
+  cursor: pointer;
+  padding: 13px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #22B2DC;
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #ACD9E7;
+}
+ul {
+  margin-left:0px;
+  padding: 0pt;
+  list-style-type: none;
+}
+li {
+  margin-bottom: 10px;
+}
+
+li:last-child {
+ margin-bottom: 0px;
+}
+
 .tab {
   overflow: hidden;
   border: none;
@@ -34,16 +80,22 @@
   vertical-align: bottom;
   padding: 0px;
   font-family: 'Helvetica';
+  text-align: center;
+  margin: 0pt 13pt;
+  position: absolute;
+  bottom: 10px;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: inherit;
+
+  background-color: #059A50;
   float: left;
   border: none;
   outline: none;
+  padding: 10px 12px;
+  margin-top: 30px;
   cursor: pointer;
-  padding: 14px 16px;
   transition: 0.3s;
   font-family: 'Helvetica';
   font-size: 10pt;
@@ -52,12 +104,12 @@
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #19C972;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #19C972;
 }
 
 /* Style the tab content */
@@ -72,13 +124,20 @@
     margin-left: auto;
     margin-right: auto;
 }
+#link{
+	text-align: center;
+	color: grey;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+
         
-#name{
+#name,#tab_title{
     vertical-align: middle;
 	text-align: center;
     color: blue;
 	color: #fff;
-    background: linear-gradient(110deg, #808000 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #228B22 34%);
+    background: linear-gradient(110deg, #1E86A5 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #228B22 34%);
     background-size: 300%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -90,7 +149,6 @@
     #caption{
         vertical-align: middle;
         text-align: center;
-        font-size: 10pt;
         font-size: 10pt;
         }
 
@@ -120,16 +178,95 @@
 	  <div id="brand-tab-content" class="tabcontent">
 			<div id="name"></div>
 			<center><div id="turtle"></div></center>
-			<div id="caption"> Sustainability Index: </div>
+			<div id="caption"> Brand Transparency Index</div>
 			<div id="index"></div>
-			<!-- <a href="https://www.fashionrevolution.org/about/transparency/">
-				Click here to learn more about the transparency index
-			</a> -->
 		  </div>
-		  
+
 		  <div id="info-tab-content" class="tabcontent">
-			<p>info tab</p>
-		  </div>
+			  	<div id="tab_title">Determining the Transparency Index</div>
+				<button class="collapsible">Policy & Commitments</button>
+				<div class="content">
+						<ul>
+								<li> What are the brand&#39s social
+										and environmental policies?</li>
+								<li> How is the brand putting its
+										policies into practice?</li>
+								<li>How does the brand decide
+										which issues to prioritise?</li>
+								<li> What are the brand&#39s future
+										goals for improving its
+										impacts?</li>
+							</ul>
+				</div>
+				<button class="collapsible">Governance</button>
+				<div class="content">
+						<ul>
+								<li>Is there board level
+										responsibility for
+										the company&#39s social and
+										environmental impacts?</li>
+								<li>Can a relevant department or
+										individual be easily contacted
+										with questions?</li>
+								<li> How does the brand link
+										human rights and
+										environmental issues to
+										its employee and supplier&#39s
+										performance?</li>
+							</ul>
+				</div>
+				<button class="collapsible">Traceability</button>
+				<div class="content">
+						<ul>
+								<li>Does the brand publish a
+										list of its suppliers,
+										from manufacturing to raw
+										material level?</li>
+								<li>If so, how much detail
+										do they share?</li>
+								<li> How does the brand link
+										human rights and
+										environmental issues to
+										its employee and supplier&#39s
+										performance?</li>
+							</ul>
+				</div>
+				<button class="collapsible">Know, Show & Fix</button>
+				<div class="content">
+						<ul>
+								<li>How does the brand assess
+										the implementation of its
+										supplier policies?</li>
+								<li> How does the brand
+										fix problems when found in
+										its supplier facilities?</li>
+								<li> Does the brand disclose
+										assessment findings?</li>
+								<li> How can workers report
+										grievances?</li>
+							</ul>
+				</div>
+				<button class="collapsible">Spotlight Issues</button>
+				<div class="content">
+						<ul>
+								<li>What is the brand doing to
+										address gender equality
+										and female empowerment?</li>
+								<li> What is the brand doing to
+										support Freedom of
+										Association and the
+										payment of living wages?</li>
+								<li> What is the brand doing to
+										tackle waste and recycling,
+										sustainable production and
+										climate change?</li>
+							</ul>
+						</div>
+						<div id = "link"> Click <a href="https://www.fashionrevolution.org/about/transparency/">here</a>
+						 to learn more about the the Fashion Transparency Index</div>
+					  </div>
+				</div>
+
 		  <script src="popup.js"></script>
 
 	<div class="tab">

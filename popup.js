@@ -98,8 +98,8 @@ var indexNum = parseInt(indexText, 10);
     }
     
     src.appendChild(img);
-      img.setAttribute("width", "120");
-  img.setAttribute("height", "120");
+      img.setAttribute("width", "150");
+  img.setAttribute("height", "150");
     
   document.getElementById('index').textContent = indexText;
   document.getElementById("index").style.color = color;
@@ -145,8 +145,22 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  var coll = document.getElementsByClassName("collapsible");
+var i;
 
-document.addEventListener('DOMContentLoaded', function(e) {
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
   
   getCurrentTabUrl(function(url) {
     var re = /(?<=www.).*(?=.com)/;
