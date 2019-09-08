@@ -67,7 +67,7 @@
 }
         
 #turtle{
-	horizontal-align: middle;
+	
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -86,13 +86,6 @@
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 5s ease infinite;
 }
-        
-    #caption{
-        vertical-align: middle;
-        text-align: center;
-        font-size: 10pt;
-        font-size: 10pt;
-        }
 
 @-webkit-keyframes Gradient {
 	0% {
@@ -105,6 +98,50 @@
 		background-position: 30% 50%
 	}
 }
+        
+.tooltip {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 10pt;
+    font-size: 10pt;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    vertical-align: middle;
+	text-align: center;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: .7;
+}
+        
+.qmark{
+        float: right;
+        }
     </style>
 
     <!--
@@ -120,8 +157,16 @@
 	  <div id="brand-tab-content" class="tabcontent">
 			<div id="name"></div>
 			<center><div id="turtle"></div></center>
-			<div id="caption"> Sustainability Index: </div>
+			
+                    <center><div class="tooltip">Sustainability Index:
+<!--                        <img src="qmark.png" height=10%, width=10% class="qmark">-->
+            <span class="tooltiptext">Click on the other tab to learn more about the index!</span>
+          </div></center>
 			<div id="index"></div>
+          
+          
+
+
 			<!-- <a href="https://www.fashionrevolution.org/about/transparency/">
 				Click here to learn more about the transparency index
 			</a> -->
